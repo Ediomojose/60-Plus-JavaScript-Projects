@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.app__body {
+  padding: 1rem;
+}
+
+.app__title__header {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+form {
+  & input {
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #e7e7e7;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-weight: 700;
+  }
+
+  & .search--button {
+    border: 0;
+    padding: 1.2rem;
+    margin: 2rem 0;
+    font-size: 1rem;
+    transition: all 0.3s ease-in;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #43655a;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: #7f969c;
+    }
+  }
+}
+
+.form__element--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  @media (width >= 768px) {
+    margin: 0 5rem;
+  }
+
+  @media (width >= 1024px) {
+    margin: 0 20rem;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  grid-auto-flow:dense;
+}
+
+.result__container {
+  display: flex;
+  flex-direction: column;
+  white-space: wrap;
+}
+
+.url--title__container{
+  font-size: 1.2rem;
+  background-color: #A4AFB8;
+  padding: 1.5rem 1rem;
+  border-radius: 0 0 .6rem .6rem;
+}
+
+#show--more {
+  outline: 0;
+  border: 0;
+  padding: 1.2rem;
+  margin: 2rem 0;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  transition: all 0.3s ease-in;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #43655a;
+  color: white;
+  cursor: pointer;
+  display: none;
+  &:hover {
+    background-color: #7f969c;
+  }
+}
